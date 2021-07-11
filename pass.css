@@ -1,0 +1,258 @@
+html{
+    transition: 0.6s ease;
+    scroll-behavior: smooth;
+  }
+  body{
+    transition: 0.6s ease;
+  }
+    .jumbotron{
+        background-image: linear-gradient(to right,rgb(21, 19, 63) 50%,rgb(60, 54, 180),rgb(21, 19, 63));
+        color: rgb(252, 252, 249);transition: 0.6s ease;
+    }
+    .container{
+        text-shadow: 5px 5px 10px #bbbbb5;
+        font-family: Cursive;transition: 0.6s ease;
+
+    }
+    .btn-light {
+        width: 50%;
+        height: 100px;
+        display: block;
+position: relative;
+margin: auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 25px;
+        font-family: Courier;
+        font-weight: bolder;
+        background-color: #8895dd;
+        color: #001a66;transition: 0.8s ease;
+    }
+    .btn-light:hover, .btn-light:focus{
+        background-color: #6875c2;
+        font-size: 30px;
+        color: white;
+        
+        }
+        
+        #passgen,#passwordval{
+          width: 50%;
+          height: auto;
+          margin: auto;
+          background-color: rgb(247, 246, 250);
+        }
+        #cookii{
+          width: 50%;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          height: auto;
+          margin: auto;
+          margin-bottom: 20px;
+        }
+        #cookiires{
+          font-size: 40px;
+          font-family: 'Courier New', Courier, monospace;
+          font-weight: bold;
+          text-align: center;
+          color: rgb(100, 63, 37);
+          margin-bottom: 20px;
+        }
+
+        #answer1{
+          font-size: 40px;
+          width: 79%;
+          transition: all 0.8s;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          color:green;transition: 0.6s ease;
+          border: 3px outset black;
+        }
+        #answer1copy{
+          width: 18%;
+        }
+        #ans1block{
+          display: flex;
+          justify-content: center;
+          align-content: center;
+        }
+        #ans1{
+margin: 20px auto 20px auto;
+        }
+        #valans{
+          font-size: 20px;
+          font-weight: bold;
+        }
+        #container3,#answer2{
+          display: flex;
+          justify-content: center;
+          align-items: center;transition: 0.6s ease;
+        }
+        #answer2{
+          font-size: 20px;
+          text-align: center;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          color: crimson;
+          transition: all 1s;transition: 0.6s ease;
+          margin-top: 5px;
+        }
+        #navigate{
+          display: flex;justify-content: center;transition: 0.6s ease;align-items: center;color: darkblue;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif0;font-size: 20px;font-weight: lighter;
+        }
+        .btn-primary{
+margin-bottom: 50px;transition: 0.6s ease;
+        }
+        #tipp{
+          text-align: center;
+          width: auto;
+          transition: 1s ease-in-out;
+        }
+        .jj{
+          margin: 5px;transition: 0.6s ease;
+          width: 17%;
+        }
+        #ideval{
+          font-size: 15px;
+          color: rgb(235, 102, 102);
+        }
+        #ideval:hover{
+          color: rgb(167, 128, 128);
+        }
+        #ideval:active{
+          color: orange;
+        }
+        #idclear{
+          font-size: 15px;
+          color: rgb(235, 102, 102);
+        }
+        #idclear:hover{
+          color: rgb(167, 128, 128);
+        }
+        #idclear:active{
+          color:orange;
+        }
+        #sep{
+          color: black;
+          font-size: 20px;
+          font-style: normal;
+        }
+        footer{
+          background-color:lightgray;
+          text-align: center;
+          margin: 0;
+          margin-top: 30px;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        #personnel-info{
+          background-color: rgb(218, 225, 233);
+          width: 40%;
+          margin: auto;
+        }
+        .mainhead{
+          font-size: 70px;
+        }
+        #cookieResult h5{
+          font-weight: bold;
+        }
+        
+        
+        @media only screen and (max-width: 600px) {
+#passgen,#passwordval{
+          width: 90%;
+          height: auto;
+          margin: auto;
+          transition: 0.6s ease;
+        }
+        #subhead{
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: bold;
+        }
+        .mainhead{
+          font-size: 50px;
+        }
+        #cookii{
+          width: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: auto;
+          margin: auto;
+          margin-bottom: 20px;
+        }
+        #cookiires{
+          font-size: 20px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-style: italic;
+          text-align: center;
+          color: rgb(100, 63, 37);
+          margin-bottom: 20px;
+          font-weight: bold;
+        }
+        #ideval,#idclear{
+          font-size: 14px;
+          color: rgb(235, 102, 102);
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: bold;
+        }
+        .btn-light {
+        display: block;
+        width: 70%;
+        height: 100px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-family: Arial;
+        font-weight: bolder;
+        background-color: #8895dd;
+        color: #001a66;transition:0.6s ease;
+    }
+    .btn-light:hover{
+        background-color: #6875c2;
+        font-size: 21px;
+        color: white;
+        transition: 0.6s ease;
+        
+        }
+        .btn-light:active{
+        background-color: #6875c2;
+        font-size: 21px;
+        color: white;
+        transition: 0.6s ease;
+        
+        }
+        #answer1{
+          width: 70%;
+          font-size: 30px;
+          transition: all 0.8s;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          color: rgb(36, 70, 36);transition: 0.6s ease;
+        }
+        #answer1copy{
+          width: 25%;
+        }
+        #answer2{
+          font-size: 11px;
+          text-align: center;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          color: crimson;
+          transition: all 1s;transition: 0.6s ease;
+          margin-top: 5px;
+        }
+        
+.jj{
+    margin:10x;transition: 0.6s ease;
+    width: 24%;
+}
+.formnav{
+    margin:10px;transition: 0.6s ease;
+}
+li,#container3{
+font-family:Arial;transition: 0.6s ease;
+}
+#personnel-info{
+          background-color: rgb(218, 225, 233);
+          width: 70%;
+          margin: auto;
+        }
+        
+        }

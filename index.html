@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Password mania</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="pass.js"></script>
+  <link type="text/css" rel="stylesheet" href="pass.css">
+</head>
+<body>
+  <button type="button" class="btn btn-primary" data-toggle="modal" id="cache" data-target="#myModal" style="display: none;">
+    Open modal
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Remember you next time?</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form>
+          <input type="text" class="form-control" id="cookieval" placeholder="Enter your name to remember next time..." autocomplete="off" style="display: block;" required>
+      <button class="btn btn-secondary" id="modalvisitbut" onclick="cookieEval(event)">SUBMIT</button></form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer" style="display: none;">
+          <button type="button" class="btn btn-secondary" id="modalclose" data-dismiss="modal" style="background-color: red;">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="mainhead">Password Mania</h1>      
+          <p id="subhead">Create strong password and check the quality of your password.</p>
+        </div>
+      </div>
+      <div id="cookiires">
+      <div id="cookieResult"></div>
+    </div>
+      <script>
+          let cookval = localStorage.getItem('name');
+        if(cookval){
+    document.getElementById('cookieResult').innerHTML="WELCOME BACK "+cookval.toUpperCase()+"!<a id='ideval' onclick='showcache2()'> Not "+cookval.toLowerCase()+"?</a><span id='sep'> | </span><a id='idclear' onclick='idclearr()'>Clear</a>";}
+    else{
+            document.getElementById('cookieResult').innerHTML = "<h5 onclick='showcache()'>Remember next time?click here</h5>";
+    }
+  
+      </script>
+      <div class="form-check" id="navigate">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" id="navv" onclick="navfunct()">Do you want to navigate sections side by side
+      </label>
+    </div>
+        <button type="button" class="btn btn-light" onclick="showww();" id="cv1">Generate Password</button>
+      
+      <div id="passgen" style="margin-bottom: 40px;">
+        <form id="myform">
+      <div class="form-group">
+        <label for="usr"  style="color: rgb(54, 20, 87);font-weight: bold;">Password length (8-256)</label>
+        <input id="passlen" type="number" class="form-control" id="usr" value="15">
+      </div>
+      <div class="form-check">
+          <label  style="color: rgb(54, 20, 87);font-weight: bold;">Characters you need in password:</label><br>
+        <label class="form-check-label">
+          <input id="smallcaps" type="checkbox" class="form-check-input" checked>Smaller-case letter
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input id="bigcaps" type="checkbox" class="form-check-input" value="" checked>Upper-case letter
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input id="digits" type="checkbox" class="form-check-input" value="" checked>Digits
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input id="specialchar" type="checkbox" class="form-check-input" value="" checked>Special Characters ( @#$%&! )
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input id="aspecialchar" type="checkbox" class="form-check-input" value="">Advanced special Characters ( "'()*+,-./:;<=>?[\]^_`{|}~ )
+        </label>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary jj" onclick="answerr1(event);" >Generate</button>
+      <div class="form-check" style="display: inline;">
+        <label class="form-check-label" style="color: rgb(54, 20, 87);font-weight: bold;">
+          <input id="autocopy" type="checkbox" class="form-check-input" value="">Copy automatically
+        </label>
+      </div>
+      <div id="ans1" style="display: none;">
+        <div id="ans1block">
+        <input id="answer1" style="display: block;">
+        <button id="answer1copy" type="button" style="display: block;" class="btn btn-dark" onclick="copyToClipboard()">Copy</button>
+        </div>
+        <div id="valans" style="text-align: center;"></div>
+      </div>
+      <div class="alert alert-warning" id="tippgen" style="display: none;">
+      </div>
+      <button type="reset" class="btn btn-primary jj" style="display: block;" onclick="ans1reset()">Reset</button>
+    </form>
+        </div>
+        <button type="button" class="btn btn-light" onclick="showpassval()" id="cv">Check the
+          Validity of your password</button>
+        <div id="passwordval" style="display: none;margin-bottom: 40px;">
+          <div class="container" id="container3">
+            <button type="button" class="btn btn-link" onclick="showlist()" style="margin-bottom: 20px;">Click to read the
+              criteria's to be met for strong password</button>
+          </div>
+          <div style="display: none;" class="container" id="containerlist">
+            <ul>
+              <li>Least 8 characters — the more characters, the better</li>
+              <li>Include both uppercase and lowercase letters</li>
+              <li>Include Numbers</li>
+              <li>Include at least one special character such as !^#> etc.</li>
+            </ul>
+          </div>
+          <form>
+          <input type="text" class="form-control" id="passvalue" placeholder="Enter the password here" autocomplete="off">
+          <button type="submit" class="btn btn-primary" style="position: relative;left: 40%;width: 20%;margin-bottom: 0;"
+            onclick="answerr2(event)">Check</button>
+            </form>
+          <div id="answer2"></div>
+          <div class="alert alert-warning" id="tipp" style="display: none;">
+          </div>
+        </div>
+        <footer>
+          
+          <p><b>Develped by : </b>Zainuddin</p>
+        
+        <div id="personnel-info">
+        <h3 style="color:rgb(27, 71, 47);">CONTACT US</h3>
+        <a id="insta" href="https://www.instagram.com/zainu__zayn/" target="_blank">Intagram</a>
+        <p><b>E-Mail : </b>zainuzayn11@gmail.com</p>
+        <p><b>Phone-No. : </b>7353237030</p>
+      </div>
+      </footer>
+</body>
+</html>
